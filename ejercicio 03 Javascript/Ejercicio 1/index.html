@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cambio de color al clickear</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <div class="cuadrado" id="cuadrado1"></div>
+      <div class="cuadrado" id="cuadrado2"></div>
+      <div class="cuadrado" id="cuadrado3"></div>
+    </div>
+
+    <script>
+      function colorRandom() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      var square1 = document.getElementById("cuadrado1");
+      var square2 = document.getElementById("cuadrado2");
+      var square3 = document.getElementById("cuadrado3");
+
+      cuadrado1.addEventListener("click", function () {
+        document.body.style.backgroundColor = colorRandom();
+      });
+
+      cuadrado2.addEventListener("click", function () {
+        document.body.style.backgroundColor = colorRandom();
+      });
+
+      cuadrado3.addEventListener("click", function () {
+        document.body.style.backgroundColor = colorRandom();
+      });
+    </script>
+  </body>
+</html>
